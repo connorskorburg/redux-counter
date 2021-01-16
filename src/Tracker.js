@@ -1,7 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Tracker = () => {
-  return <h1>Count: </h1>
+  const count = useSelector(state => state.count);
+  return <h1>Count: {count}</h1>
 };
 
 export default Tracker;
